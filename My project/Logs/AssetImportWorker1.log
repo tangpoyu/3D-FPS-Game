@@ -1,0 +1,369 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.6f1 (7da38d85baf6) revision 8233869'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 7987 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+D:/Unity Project/3D FPS Game/My project
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+9438
+Successfully changed project path to: D:/Unity Project/3D FPS Game/My project
+D:/Unity Project/3D FPS Game/My project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 163.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.6f1 (7da38d85baf6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity Project/3D FPS Game/My project/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Microsoft Basic Render Driver (ID=0x8c)
+    Vendor:   Microsoft
+    VRAM:     3993 MB
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56392
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006067 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 71.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.617 seconds
+Domain Reload Profiling:
+	ReloadAssembly (617ms)
+		BeginReloadAssembly (118ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (400ms)
+			LoadAssemblies (118ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (96ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (232ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (72ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (112ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.026728 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.160 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1161ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (893ms)
+			LoadAssemblies (196ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (271ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (340ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (230ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.19 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3385 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (111.2 KB). Loaded Objects now: 3842.
+Memory consumption went from 119.3 MB to 119.2 MB.
+Total: 3.951100 ms (FindLiveObjects: 0.313800 ms CreateObjectMapping: 0.128200 ms MarkObjects: 3.384100 ms  DeleteObjects: 0.123500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1211704.115701 seconds.
+  path: Assets/Models/First Person/All Animations/Axe.fbx
+  artifactKey: Guid(ded3362b8b3b82243b3043bb355c770c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/First Person/All Animations/Axe.fbx using Guid(ded3362b8b3b82243b3043bb355c770c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e18bb110efd5fb09aec3325d8165271') in 1.064569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Models/First Person/All Animations/Torch.fbx
+  artifactKey: Guid(1a9ba953eb970c54a971f71c8740eafd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/First Person/All Animations/Torch.fbx using Guid(1a9ba953eb970c54a971f71c8740eafd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cb985ebe1623426b8d0d2e579e782fa') in 0.400839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Models/First Person/All Animations/Iron Spear.fbx
+  artifactKey: Guid(2b811d29082948e45b9ecfd1645a6ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/First Person/All Animations/Iron Spear.fbx using Guid(2b811d29082948e45b9ecfd1645a6ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b27af9a2379e60db709016cbaa333e81') in 0.075160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Models/First Person/All Animations/Revolver.fbx
+  artifactKey: Guid(2bd6bf150a6e08645964bd2baf2a789b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/First Person/All Animations/Revolver.fbx using Guid(2bd6bf150a6e08645964bd2baf2a789b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62369e77518484bf2f92f4dae3910ffc') in 0.278575 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Models/First Person/All Animations/Hunting Rifle.fbx
+  artifactKey: Guid(4e4397155881b1b43b85d583117147cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/First Person/All Animations/Hunting Rifle.fbx using Guid(4e4397155881b1b43b85d583117147cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d9202c7d03440da3a1c3027053f4bbf') in 0.465969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Models/First Person/All Animations/Wooden Spear.fbx
+  artifactKey: Guid(f01a880f7473c2546b3ff80815537299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/First Person/All Animations/Wooden Spear.fbx using Guid(f01a880f7473c2546b3ff80815537299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7704f916d6aa40afc920bf545d6671e') in 0.379835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 236.878623 seconds.
+  path: Assets/Materials/Weapons/First Person/Assault Rifle.mat
+  artifactKey: Guid(bf343de3af9f4274a8d78d9dee5b0908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Weapons/First Person/Assault Rifle.mat using Guid(bf343de3af9f4274a8d78d9dee5b0908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7143d22d282d9bd8894bd67d776ff4e') in 0.324532 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Materials/Weapons/First Person/Stone Hatchet.mat
+  artifactKey: Guid(b5361b3fa7e3b094da34d712db9da7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Weapons/First Person/Stone Hatchet.mat using Guid(b5361b3fa7e3b094da34d712db9da7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31cc640a6aeda82196cb23b73f0250e5') in 0.640458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Materials/Weapons/First Person/Revolver.mat
+  artifactKey: Guid(0c4bc943ef0b9cb4480b9af834e2ce7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Weapons/First Person/Revolver.mat using Guid(0c4bc943ef0b9cb4480b9af834e2ce7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9926c076b4bb3078c894d7a76ba0f860') in 0.208369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Materials/Weapons/First Person/Axe.mat
+  artifactKey: Guid(3336d43058b91ea4aa0f2e2b1c27eb2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Weapons/First Person/Axe.mat using Guid(3336d43058b91ea4aa0f2e2b1c27eb2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebb556f10303e1e0bea1e40d17e864d2') in 0.663616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Materials/Weapons/First Person/Wooden Bow.mat
+  artifactKey: Guid(268fb23e097dcdf41864edde6d409239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Weapons/First Person/Wooden Bow.mat using Guid(268fb23e097dcdf41864edde6d409239) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67ab550b56e1aeeff43e012cd6ca0e7a') in 0.830003 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 62.471383 seconds.
+  path: Assets/_TerrainAutoUpgrade/layer_GrassGrass NRM3d1cca0d6d0e9938.terrainlayer
+  artifactKey: Guid(cdda9479dd3fa6d49860e0906741875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainAutoUpgrade/layer_GrassGrass NRM3d1cca0d6d0e9938.terrainlayer using Guid(cdda9479dd3fa6d49860e0906741875d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10d0d3d1c55c0e593ed06c4351106f31') in 0.043811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 236.889575 seconds.
+  path: Assets/Textures/Weapons/First Person/Arms_NRM.png
+  artifactKey: Guid(c9f4b2be92483774cac87ee120b479b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Arms_NRM.png using Guid(c9f4b2be92483774cac87ee120b479b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '759e6b2f63af00736c7a84c25b3ab473') in 0.097224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Textures/Weapons/First Person/Revolver_AO.png
+  artifactKey: Guid(afed622cd776b104993b13ba884d26d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Revolver_AO.png using Guid(afed622cd776b104993b13ba884d26d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a37c8aaf6422d0852a5e9c86658733c8') in 0.098154 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Textures/Weapons/First Person/Torch.png
+  artifactKey: Guid(7f9d1cf4903a83e4cb5ae6a4a705440f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Torch.png using Guid(7f9d1cf4903a83e4cb5ae6a4a705440f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c5a843a9499c06083991ac59207c74') in 0.063358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Textures/Weapons/First Person/Building Plan_NRM.png
+  artifactKey: Guid(abd7c6739714a304cbba710011ba3f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Building Plan_NRM.png using Guid(abd7c6739714a304cbba710011ba3f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b184ca3a2028ef76bec9c37d833d0711') in 0.081208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Textures/Weapons/First Person/Hunting Rifle_SPEC.png
+  artifactKey: Guid(7b5c4411bdf9d884391a972bb2072bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Hunting Rifle_SPEC.png using Guid(7b5c4411bdf9d884391a972bb2072bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1455610c30adbd2ee660bc05012bdff9') in 0.077474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Textures/Weapons/First Person/Bone Club_SPEC.png
+  artifactKey: Guid(000b34d385b1c924a92a0801467ea34d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Bone Club_SPEC.png using Guid(000b34d385b1c924a92a0801467ea34d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '688fecd6b7de94792a521be36f2694a4') in 0.033729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Textures/Weapons/First Person/Assault Rifle_NRM.png
+  artifactKey: Guid(c88259f110c245a46904e1fe0dfeb575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Assault Rifle_NRM.png using Guid(c88259f110c245a46904e1fe0dfeb575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea00faa3abcbabf703dda1b7bb9cf3e7') in 0.077008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Textures/Weapons/First Person/Stone Hatchet.png
+  artifactKey: Guid(6e749effae3ded04083969c859bcf30a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Stone Hatchet.png using Guid(6e749effae3ded04083969c859bcf30a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8def7e876d4f41288e4af73fbfd7c12') in 0.070347 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Textures/Weapons/First Person/Stone Hatchet_NRM.png
+  artifactKey: Guid(94fa823309508ad4eae495e9bf6d44c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Stone Hatchet_NRM.png using Guid(94fa823309508ad4eae495e9bf6d44c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db970de722f8ca95494cbb793ecb0d17') in 0.069000 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Textures/Weapons/First Person/Wooden Bow_NRM.png
+  artifactKey: Guid(a4c4a95a7c6042a459491808e4c2559c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Wooden Bow_NRM.png using Guid(a4c4a95a7c6042a459491808e4c2559c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81c9cb72c0952ea85730c1fc70f479a7') in 0.037804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Textures/Weapons/First Person/Torch_NRM.png
+  artifactKey: Guid(c3ed39529f3e0f440a957cb9af784e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Torch_NRM.png using Guid(c3ed39529f3e0f440a957cb9af784e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca5b48b413fe1a316f1eb7d05095f02') in 0.062639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Textures/Weapons/First Person/Wooden Spear.png
+  artifactKey: Guid(1295b55f85dac4645ad65d2bcc20d2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Wooden Spear.png using Guid(1295b55f85dac4645ad65d2bcc20d2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f33d93a9c3970d8e7566b2fb1c37622') in 0.089064 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Textures/Weapons/First Person/Pickaxe_SPEC.png
+  artifactKey: Guid(128712dd2397bba429f0dc6fcdb6ce99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Pickaxe_SPEC.png using Guid(128712dd2397bba429f0dc6fcdb6ce99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a08f411f0d60cd8340c24b656effc0d3') in 0.091599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Textures/Weapons/First Person/Assault Rifle_MET.png
+  artifactKey: Guid(2e66fc85b9ea4624fb33983da93ae9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Assault Rifle_MET.png using Guid(2e66fc85b9ea4624fb33983da93ae9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '639d2b99819a2fe33a26065ed96c7924') in 0.101141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Textures/Weapons/First Person/Iron Spear.png
+  artifactKey: Guid(34b85df07d1c6a649937d10c8e5b1674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Iron Spear.png using Guid(34b85df07d1c6a649937d10c8e5b1674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2ebf52d1b083f02ceff586c53e18411') in 0.088633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Textures/Weapons/First Person/Wooden Bow_SPEC.png
+  artifactKey: Guid(6d0a662d7459a5743970bc1a1e5e2a58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Wooden Bow_SPEC.png using Guid(6d0a662d7459a5743970bc1a1e5e2a58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa462c4f8ee258d85aecf1bf0dc9e3d0') in 0.110210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Textures/Weapons/First Person/Hunting Rifle_NRM.png
+  artifactKey: Guid(159f3ab4ae6b1f942b4c92d57910f54e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Hunting Rifle_NRM.png using Guid(159f3ab4ae6b1f942b4c92d57910f54e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa164728702976be132d1a0279aec97f') in 0.151944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Textures/Weapons/First Person/Revolver.png
+  artifactKey: Guid(1ce546ec26c49e04c8fc31caea7d32af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Revolver.png using Guid(1ce546ec26c49e04c8fc31caea7d32af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc958c6c5c3a79289e730663a63267b4') in 0.074715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Textures/Weapons/First Person/Axe_NRM.png
+  artifactKey: Guid(cb95ab3448b54f346b2d9ce4f41cec08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Axe_NRM.png using Guid(cb95ab3448b54f346b2d9ce4f41cec08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0e690fda76aedae3e267b248143fac') in 0.121394 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Textures/Weapons/First Person/Shotgun.png
+  artifactKey: Guid(f1320fa7db14a834e82edd7999618c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Shotgun.png using Guid(f1320fa7db14a834e82edd7999618c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c0de4c439265c5ac403eae4dd7e394e') in 0.117740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Textures/Weapons/First Person/Assault Rifle.png
+  artifactKey: Guid(fea1912f62790f142bc4b461edbce5f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Assault Rifle.png using Guid(fea1912f62790f142bc4b461edbce5f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb05f23fc4bd1c6e1d26b7fc71f38cc3') in 0.095402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Textures/Weapons/First Person/Building Plan_MET.png
+  artifactKey: Guid(dbd8f5afeffa8b7458d9c9a0ad05f516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Weapons/First Person/Building Plan_MET.png using Guid(dbd8f5afeffa8b7458d9c9a0ad05f516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '681806823f212ebd9d00ba23c279af87') in 0.080908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1088.932305 seconds.
+  path: Assets/Prefabs/Objects/Destroyed Rock_Normal.prefab
+  artifactKey: Guid(12679ca07f698a749a005d7369b94922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Destroyed Rock_Normal.prefab using Guid(12679ca07f698a749a005d7369b94922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '277700286d1d378d759071ade0891b1c') in 0.681517 seconds 
