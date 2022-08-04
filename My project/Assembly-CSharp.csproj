@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Helper Script\TagHolder.cs" />
     <Compile Include="Assets\Script\Player Script\PlayerMovement.cs" />
+    <Compile Include="Assets\Script\Player Script\MouseLook.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Standard\_Antialiasing\FXAAPreset2.shader" />
