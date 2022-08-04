@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &38537038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3132538005302101410, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
+  m_PrefabInstance: {fileID: 215476168898970015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &38537039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38537038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdf82739fa0e1147953844ff20f074c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jump_Forse: 10
 --- !u!1001 &389853651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -291,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.519924
+      value: 26.326
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalPosition.z
