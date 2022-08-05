@@ -42,6 +42,9 @@ public class WeaponHandler : MonoBehaviour
 
     public GameObject attackPoint;
 
+    public WeaponFireType WeaponFireType { get => weaponFireType; set => weaponFireType = value; }
+    public WeaponBulletType WeaponBulletType { get => weaponBulletType; set => weaponBulletType = value; }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();

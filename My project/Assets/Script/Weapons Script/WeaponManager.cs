@@ -6,11 +6,16 @@ public class WeaponManager : MonoBehaviour
 {
     [SerializeField]
     private WeaponHandler[] weapons;
+    private WeaponHandler selectedWeapon;
     private int currentWeaponIndex = 0;
+
+    public WeaponHandler SelectedWeapon { get => selectedWeapon; set => selectedWeapon = value; }
+
     // Start is called before the first frame update
     void Start()
     {
         weapons[currentWeaponIndex].gameObject.SetActive(true);
+        selectedWeapon = weapons[currentWeaponIndex];
     }
 
     // Update is called once per frame
@@ -27,6 +32,11 @@ public class WeaponManager : MonoBehaviour
         {
             weapons[lastWeaponIndex].gameObject.SetActive(false);
             weapons[currentWeaponIndex].gameObject.SetActive(true);
+            selectedWeapon = weapons[currentWeaponIndex];
         }
     }
+
+    
+
+
 }
