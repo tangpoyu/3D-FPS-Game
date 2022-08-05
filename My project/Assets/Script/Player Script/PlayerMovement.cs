@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController characterController;
+    private PlayerFootsteps footsteps;
     private Vector3 move_Direction;
     public float speed;
     public float moveSpeed;
@@ -26,6 +27,14 @@ public class PlayerMovement : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         look_Root = transform.GetChild(0);
+        footsteps = GetComponentInChildren<PlayerFootsteps>();
+    }
+
+    private void Start()
+    {
+        footsteps.VolumeMin = footsteps.WalkVolumeMin;
+        footsteps.VolumeMax = footsteps.WalkVolumeMax;
+        footsteps.StepDistance = footsteps.WalkStepDistance;
     }
 
     // Update is called once per frame
@@ -40,8 +49,20 @@ public class PlayerMovement : MonoBehaviour
         // convert move_direction from worldSpace to localSpace
         move_Direction = transform.TransformDirection(move_Direction);
         Crouch();
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !is_Crouching) speed = sprint_Speed;
-        if (Input.GetKeyUp(KeyCode.LeftShift) && !is_Crouching) speed = moveSpeed;
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !is_Crouching)
+        {
+            speed = sprint_Speed;
+            footsteps.StepDistance = footsteps.SprintStepDistance;
+            footsteps.VolumeMin = footsteps.SprintVolume;
+            footsteps.VolumeMax = footsteps.SprintVolume;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift) && !is_Crouching)
+        {
+            speed = moveSpeed;
+            footsteps.VolumeMin = footsteps.WalkVolumeMin;
+            footsteps.VolumeMax = footsteps.WalkVolumeMax;
+            footsteps.StepDistance = footsteps.WalkStepDistance;
+        }
         move_Direction *= speed * Time.deltaTime;
         ApplyGravity();
         characterController.Move(move_Direction);
@@ -52,12 +73,18 @@ public class PlayerMovement : MonoBehaviour
        if (Input.GetKeyDown(KeyCode.LeftControl) )
         {
             is_Crouching = true;
+            footsteps.VolumeMin = footsteps.CrouchVolume;
+            footsteps.VolumeMax = footsteps.CrouchVolume;
+            footsteps.StepDistance = footsteps.CrouchStepDistance;
             look_Root.localPosition = new Vector3(0, crouch_Height, 0);
             speed = crouch_Speed;
         }
 
        if (Input.GetKeyUp(KeyCode.LeftControl)) {
             is_Crouching = false;
+            footsteps.VolumeMin = footsteps.WalkVolumeMin;
+            footsteps.VolumeMax = footsteps.WalkVolumeMax;
+            footsteps.StepDistance = footsteps.WalkStepDistance;
             look_Root.localPosition = new Vector3(0, stand_Height, 0);
             speed = moveSpeed;
         }
