@@ -60,6 +60,7 @@
     <Compile Include="Assets\Script\Player Script\PlayerFootsteps.cs" />
     <Compile Include="Assets\Script\Player Script\PlayerMovement.cs" />
     <Compile Include="Assets\Script\Player Script\MouseLook.cs" />
+    <Compile Include="Assets\Script\Weapons Script\WeaponHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Standard\_Antialiasing\FXAAPreset2.shader" />
