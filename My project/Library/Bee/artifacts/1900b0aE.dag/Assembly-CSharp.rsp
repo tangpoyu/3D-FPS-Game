@@ -354,6 +354,7 @@
 "Assets/Script/Player Script/PlayerFootsteps.cs"
 "Assets/Script/Player Script/PlayerMovement.cs"
 "Assets/Script/Weapons Script/WeaponHandler.cs"
+"Assets/Script/Weapons Script/WeaponManager.cs"
 -langversion:9.0
 
 /deterministic
