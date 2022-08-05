@@ -352,6 +352,7 @@
 "Assets/Script/Helper Script/TagHolder.cs"
 "Assets/Script/Player Script/MouseLook.cs"
 "Assets/Script/Player Script/PlayerMovement.cs"
+"Assets/Script/Player Script/PlayerSprintCrouch.cs"
 -langversion:9.0
 
 /deterministic
