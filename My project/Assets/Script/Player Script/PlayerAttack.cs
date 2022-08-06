@@ -11,9 +11,17 @@ public class PlayerAttack : MonoBehaviour
     private float nextTimeToFire;
     private float damage = 20f;
 
+    private Animator zoomCarmeraAnim;
+    private Camera mainCam;
+    private GameObject crosshair;
+
+
     private void Awake()
     {
         weaponManager = GetComponent<WeaponManager>();
+        zoomCarmeraAnim = transform.Find(Tags.LOOK_ROOT).transform.Find(Tags.ZOOM_CAMERA).GetComponent<Animator>();
+        crosshair = GameObject.FindWithTag(Tags.CROSSHAIR);
+        mainCam = Camera.main;
     }
     // Start is called before the first frame update
     void Start()
@@ -24,7 +32,31 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ZoomInAndOut();
         WeaponShoot();
+    }
+
+    private void ZoomInAndOut()
+    {
+        WeaponHandler weapon = weaponManager.SelectedWeapon;
+        if (weapon.WeaponAim == WeaponAim.AIM)
+        {
+            
+            if(Input.GetMouseButtonDown(1))
+            {
+                weapon.IsZoomed = !weapon.IsZoomed; 
+            }
+            zoomCarmeraAnim.Play(weapon.IsZoomed ? AnimationTags.ZOOM_IN_ANIM : AnimationTags.ZOOM_OUT_ANIM);
+        }
+
+        if(weapon.WeaponAim == WeaponAim.SELF_AIM)
+        {
+            if(Input.GetMouseButtonDown(1))
+            {
+                weapon.IsZoomed = !weapon.IsZoomed;
+            }
+            weapon.Aim(weapon.IsZoomed);
+        }
     }
 
     private void WeaponShoot()
@@ -52,7 +84,18 @@ public class PlayerAttack : MonoBehaviour
                     BulletFired();
                 } else
                 {
+                    if(weapon.IsZoomed)
+                    {
+                        weapon.Shoot();
+                        weapon.IsZoomed = false;
+                        
+                        if(weapon.WeaponBulletType == WeaponBulletType.ARROW)
+                        {
 
+                        } else if(weapon.WeaponBulletType == WeaponBulletType.SPEAR) {
+
+                        }
+                    }
                 }
             }
         }

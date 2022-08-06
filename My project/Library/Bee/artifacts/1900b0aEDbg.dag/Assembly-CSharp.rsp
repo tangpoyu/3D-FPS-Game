@@ -351,8 +351,11 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Script/Helper Script/TagHolder.cs"
 "Assets/Script/Player Script/MouseLook.cs"
+"Assets/Script/Player Script/PlayerAttack.cs"
+"Assets/Script/Player Script/PlayerFootsteps.cs"
 "Assets/Script/Player Script/PlayerMovement.cs"
-"Assets/Script/Player Script/PlayerSprintCrouch.cs"
+"Assets/Script/Weapons Script/WeaponHandler.cs"
+"Assets/Script/Weapons Script/WeaponManager.cs"
 -langversion:9.0
 
 /deterministic

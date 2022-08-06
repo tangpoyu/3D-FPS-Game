@@ -15,6 +15,7 @@ public class WeaponManager : MonoBehaviour
     void Start()
     {
         weapons[currentWeaponIndex].gameObject.SetActive(true);
+        weapons[currentWeaponIndex].IsZoomed = false;
         selectedWeapon = weapons[currentWeaponIndex];
     }
 
@@ -32,6 +33,7 @@ public class WeaponManager : MonoBehaviour
         {
             weapons[lastWeaponIndex].gameObject.SetActive(false);
             weapons[currentWeaponIndex].gameObject.SetActive(true);
+            weapons[currentWeaponIndex].IsZoomed = false;
             selectedWeapon = weapons[currentWeaponIndex];
         }
     }

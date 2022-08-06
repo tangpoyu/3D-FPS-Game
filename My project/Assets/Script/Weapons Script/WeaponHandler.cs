@@ -27,6 +27,7 @@ public class WeaponHandler : MonoBehaviour
 {
     private Animator animator;
 
+    private bool isZoomed = false;
     [SerializeField]
     private WeaponAim weaponAim;
     [SerializeField]
@@ -44,6 +45,8 @@ public class WeaponHandler : MonoBehaviour
 
     public WeaponFireType WeaponFireType { get => weaponFireType; set => weaponFireType = value; }
     public WeaponBulletType WeaponBulletType { get => weaponBulletType; set => weaponBulletType = value; }
+    public WeaponAim WeaponAim { get => weaponAim; set => weaponAim = value; }
+    public bool IsZoomed { get => isZoomed; set => isZoomed = value; }
 
     private void Awake()
     {
