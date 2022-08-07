@@ -17,10 +17,17 @@ public class EnemyController : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private EnemyState enemyState;
     private Transform attackTarget;
+    [SerializeField]
     private float walkSpeed = 0.5f, runSpeed = 4f;
-    private float chaseDistance = 7f, currentChaseDistance, attackDistance = 1.8f, chaseAfterAttackDistance = 2f;
-    private float patrolRadiusMin = 20f, patrolRadiusMax = 60f, patrolForThisTime = 15f, patrolTimer;
-    private float waitBeforeAttack = 2f, attackTimer;
+    [SerializeField]
+    private float chaseDistance = 7f, attackDistance = 1.8f, chaseAfterAttackDistance = 2f;
+    private float currentChaseDistance;
+    [SerializeField]
+    private float patrolRadiusMin = 20f, patrolRadiusMax = 60f, patrolForThisTime = 15f;
+    private float patrolTimer;
+    [SerializeField]
+    private float waitBeforeAttack = 2f;
+    private float attackTimer;
 
 
     private void Awake()

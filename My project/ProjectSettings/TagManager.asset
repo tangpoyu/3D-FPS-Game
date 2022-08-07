@@ -9,6 +9,7 @@ TagManager:
   - Look Root
   - FP Camera
   - Arror
+  - Enemy
   layers:
   - Default
   - TransparentFX

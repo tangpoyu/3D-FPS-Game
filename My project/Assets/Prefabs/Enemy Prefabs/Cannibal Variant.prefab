@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannibal
       objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -58,7 +66,18 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 95f1160dae4323d41b5b5b7e7d320f2c, type: 2}
+      objectReference: {fileID: 9100000, guid: d312f73a450b1464280879a565ffd625, type: 2}
+    - target: {fileID: 9500000, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Chest'\n\tTransform 'Hips'\n\tTransform
+        'Middle_Spine'\n\tTransform 'Chest'\n\tTransform 'Hips'\n\tTransform 'Middle_Spine'\n\tTransform
+        'Armature'\n\tTransform 'Armature'\n\tTransform 'Armature'\n\tTransform 'Chest'\n\tand
+        more ...\n\tFrom animation clip 'Idle'\n\tFrom animation clip 'Walk'\n\tFrom
+        animation clip 'Run'\n\tFrom animation clip 'Boar Attack'\n\tFrom animation
+        clip 'Death'"
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -103,6 +122,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.31, y: 1.79, z: 0.31}
   m_Center: {x: 0.02, y: 0.94, z: -0.08}
+--- !u!114 &1726339770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274377802623953270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac16927c218c104782d8d7ba2ee53c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 0.5
+  runSpeed: 4
+  chaseDistance: 7
+  attackDistance: 1.8
+  chaseAfterAttackDistance: 2
+  patrolRadiusMin: 20
+  patrolRadiusMax: 60
+  patrolForThisTime: 15
+  waitBeforeAttack: 2
 --- !u!195 &21824042198876144
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -135,17 +175,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4960c7b520387648b116202e0579596, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1726339770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3274377802623953270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac16927c218c104782d8d7ba2ee53c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
