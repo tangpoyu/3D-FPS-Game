@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2870459490185989436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.66, z: 0.36}
+  m_LocalPosition: {x: 0, y: 0.66, z: -0.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 1786748863}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,8 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1954c27906cbf84496d588d64a060d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 917017193940922253, guid: 6979688437051824693b11be55cfeaa7, type: 3}
-  spear: {fileID: 1431194878215024975, guid: 3204110c8ceb45347b5f2e0d9e615c4e, type: 3}
+  arrowPrefab: {fileID: 917017193940922253, guid: 6979688437051824693b11be55cfeaa7, type: 3}
+  spearPrefab: {fileID: 1431194878215024975, guid: 3204110c8ceb45347b5f2e0d9e615c4e, type: 3}
   arrowStartPosition: {fileID: 7729643993958008953}
 --- !u!1 &4662537784746721842
 GameObject:
