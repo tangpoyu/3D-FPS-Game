@@ -38,9 +38,8 @@ public class Tags
     public const string ZOOM_CAMERA = "FP Camera";
     public const string CROSSHAIR = "Crosshair";
     public const string ARROW_TAG = "Arrow";
-
+    public const string SPEAR_TAG = "Spear";
     public const string AXE_TAG = "Axe";
-
     public const string PLAYER_TAG = "Player";
     public const string ENEMY_TAG = "Enemy";
 

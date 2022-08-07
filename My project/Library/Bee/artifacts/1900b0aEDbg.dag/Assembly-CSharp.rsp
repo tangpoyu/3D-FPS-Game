@@ -354,6 +354,8 @@
 "Assets/Script/Player Script/PlayerAttack.cs"
 "Assets/Script/Player Script/PlayerFootsteps.cs"
 "Assets/Script/Player Script/PlayerMovement.cs"
+"Assets/Script/Player Script/test.cs"
+"Assets/Script/Weapons Script/ArrorBow.cs"
 "Assets/Script/Weapons Script/WeaponHandler.cs"
 "Assets/Script/Weapons Script/WeaponManager.cs"
 -langversion:9.0

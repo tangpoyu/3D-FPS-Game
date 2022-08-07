@@ -15,6 +15,11 @@ public class PlayerAttack : MonoBehaviour
     private Camera mainCam;
     private GameObject crosshair;
 
+    [SerializeField]
+    private GameObject arrowPrefab, spearPrefab;
+
+    [SerializeField]
+    private Transform arrowStartPosition;
 
     private void Awake()
     {
@@ -68,6 +73,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 nextTimeToFire = Time.time + 1 / fireRate;
                 weapon.Shoot();
+                BulletFired();
             }
         } else
         {
@@ -91,9 +97,9 @@ public class PlayerAttack : MonoBehaviour
                         
                         if(weapon.WeaponBulletType == WeaponBulletType.ARROW)
                         {
-
+                            ThrowWeapon(Tags.ARROW_TAG);
                         } else if(weapon.WeaponBulletType == WeaponBulletType.SPEAR) {
-
+                            ThrowWeapon(Tags.SPEAR_TAG);
                         }
                     }
                 }
@@ -101,8 +107,31 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public void ThrowWeapon(string weaponType)
+    {
+        switch(weaponType)
+        {
+            case Tags.ARROW_TAG:
+                GameObject arrow = Instantiate(arrowPrefab);
+                arrow.transform.position = arrowStartPosition.position;
+                arrow.GetComponent<ArrorBow>().Fire(mainCam);
+                break;
+
+            case Tags.SPEAR_TAG:
+                GameObject spear = Instantiate(spearPrefab);
+                spear.transform.position = arrowStartPosition.position;
+                spear.GetComponent<ArrorBow>().Fire(mainCam);
+                break;
+        }
+    }
+
     private void BulletFired()
     {
-        throw new NotImplementedException();
+        RaycastHit hit;
+            
+        if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
+        {
+            print(hit.transform.gameObject.name);
+        }
     }
 }

@@ -54,7 +54,7 @@ public class MouseLook : MonoBehaviour
 
     private void LookRound()
     {
-        print(MouseAxis.MOUSE_X + ": " + Input.GetAxis(MouseAxis.MOUSE_X) + " ," + MouseAxis.MOUSE_Y + ": " + Input.GetAxis(MouseAxis.MOUSE_Y));
+       // print(MouseAxis.MOUSE_X + ": " + Input.GetAxis(MouseAxis.MOUSE_X) + " ," + MouseAxis.MOUSE_Y + ": " + Input.GetAxis(MouseAxis.MOUSE_Y));
         current_Mouse_Look = new Vector2(Input.GetAxis(MouseAxis.MOUSE_Y), Input.GetAxis(MouseAxis.MOUSE_X));
         look_Angles.x += current_Mouse_Look.x * sensitivity * (invert ? 1f : -1f);
         look_Angles.y += current_Mouse_Look.y * sensitivity * (invert ? -1f : 1f);
