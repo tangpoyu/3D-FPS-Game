@@ -32,6 +32,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject attackPoint;
 
+    public EnemyState EnemyState { get => enemyState; set => enemyState = value; }
+    public float ChaseDistance { get => chaseDistance; set => chaseDistance = value; }
+    public float AttackDistance { get => attackDistance; set => attackDistance = value; }
+    public float ChaseAfterAttackDistance { get => chaseAfterAttackDistance; set => chaseAfterAttackDistance = value; }
 
     private void Awake()
     {
@@ -42,7 +46,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyState = EnemyState.PATROL;
+        EnemyState = EnemyState.PATROL;
         patrolTimer = patrolForThisTime;
         attackTimer = waitBeforeAttack;
         currentChaseDistance = chaseDistance;
@@ -51,17 +55,17 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemyState == EnemyState.PATROL)
+        if(EnemyState == EnemyState.PATROL)
         {
             Patrol();
         }
 
-        if(enemyState == EnemyState.CHASE)
+        if(EnemyState == EnemyState.CHASE)
         {
             Chase();
         }
 
-        if(enemyState == EnemyState.ATTACK)
+        if(EnemyState == EnemyState.ATTACK)
         {
             Attack();
         }
@@ -79,12 +83,13 @@ public class EnemyController : MonoBehaviour
         }
         if (Vector3.Distance(transform.position, attackTarget.position) > attackDistance + chaseAfterAttackDistance)
         {
-            enemyState = EnemyState.CHASE;
+            EnemyState = EnemyState.CHASE;
         }
     }
 
     private void Chase()
     {
+      //  print(Vector3.Distance(transform.position, attackTarget.position));
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = runSpeed;
         navMeshAgent.SetDestination(attackTarget.position);
@@ -93,7 +98,7 @@ public class EnemyController : MonoBehaviour
         {
             enemyAnimator.Run(false);
             enemyAnimator.Walk(false);
-            enemyState = EnemyState.ATTACK;
+            EnemyState = EnemyState.ATTACK;
 
             if(chaseDistance != currentChaseDistance)
             {
@@ -102,7 +107,7 @@ public class EnemyController : MonoBehaviour
         } else if(Vector3.Distance(transform.position, attackTarget.position) > chaseDistance) 
         {
             enemyAnimator.Run(false);
-            enemyState = EnemyState.PATROL;
+            EnemyState = EnemyState.PATROL;
             patrolTimer = patrolForThisTime;
             if (chaseDistance != currentChaseDistance)
             {
@@ -127,7 +132,7 @@ public class EnemyController : MonoBehaviour
         if (Vector3.Distance(transform.position, attackTarget.position) <= chaseDistance)
         {
             enemyAnimator.Walk(false);
-            enemyState = EnemyState.CHASE;
+            EnemyState = EnemyState.CHASE;
         }
     }
 

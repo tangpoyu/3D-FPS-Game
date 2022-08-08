@@ -60,14 +60,15 @@
     <Compile Include="Assets\Script\Weapons Script\WeaponManager.cs" />
     <Compile Include="Assets\Script\Weapons Script\WeaponHandler.cs" />
     <Compile Include="Assets\Script\Helper Script\TagHolder.cs" />
+    <Compile Include="Assets\Script\Helper Script\HealthScript.cs" />
     <Compile Include="Assets\Script\Player Script\PlayerFootsteps.cs" />
+    <Compile Include="Assets\Script\Player Script\AttackPoint.cs" />
     <Compile Include="Assets\Script\Player Script\PlayerMovement.cs" />
     <Compile Include="Assets\Script\Enemy Script\EnemyController.cs" />
     <Compile Include="Assets\Script\Player Script\MouseLook.cs" />
     <Compile Include="Assets\Script\Player Script\test.cs" />
     <Compile Include="Assets\Script\Player Script\PlayerAttack.cs" />
     <Compile Include="Assets\Script\Enemy Script\EnemyAnimator.cs" />
-    <Compile Include="Assets\Script\Player Script\AttackPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Standard\_Antialiasing\FXAAPreset2.shader" />

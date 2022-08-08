@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0401449d80341a64eb24616e95dacfbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 10
   radius: 1
   layerMask:
     serializedVersion: 2
@@ -367,7 +367,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3274377802623953270}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.36, y: 1.77, z: 0.28}
@@ -428,6 +428,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4960c7b520387648b116202e0579596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8178023233175562755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274377802623953270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd304c1bb6ee46f4596d2a249e555b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 1
 --- !u!4 &3274377802624054632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400054, guid: 5eb4e4c4d0b3c8f4bb02a762ec01f6b4, type: 3}

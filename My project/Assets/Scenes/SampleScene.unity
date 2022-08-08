@@ -540,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 120.69
+      value: 141.9
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalRotation.w
@@ -629,11 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4121916731971976689, guid: 43ed1c1bb2bc02f4bbb05fb64310ba3f, type: 3}
       propertyPath: m_Name
-      value: Boar Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 4121916731971976689, guid: 43ed1c1bb2bc02f4bbb05fb64310ba3f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: Boar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43ed1c1bb2bc02f4bbb05fb64310ba3f, type: 3}

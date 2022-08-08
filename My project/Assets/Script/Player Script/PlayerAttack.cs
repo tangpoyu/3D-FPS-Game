@@ -9,6 +9,7 @@ public class PlayerAttack : MonoBehaviour
 
     private float fireRate = 15f;
     private float nextTimeToFire;
+    [SerializeField]
     private float damage = 20f;
 
     private Animator zoomCarmeraAnim;
@@ -132,6 +133,14 @@ public class PlayerAttack : MonoBehaviour
         if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
         {
             print(hit.transform.gameObject.name);
+            switch(hit.transform.tag)
+            {
+                case Tags.ENEMY_TAG:
+                    hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
+                    break;
+            }
+            
+          
         }
     }
 }

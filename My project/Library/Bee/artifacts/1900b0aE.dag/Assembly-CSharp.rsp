@@ -351,6 +351,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Script/Enemy Script/EnemyAnimator.cs"
 "Assets/Script/Enemy Script/EnemyController.cs"
+"Assets/Script/Helper Script/HealthScript.cs"
 "Assets/Script/Helper Script/TagHolder.cs"
 "Assets/Script/Player Script/AttackPoint.cs"
 "Assets/Script/Player Script/MouseLook.cs"

@@ -20,7 +20,7 @@ public class AttackPoint : MonoBehaviour
         Collider[] hits = Physics.OverlapSphere(transform.position, radius, layerMask);
         if(hits.Length > 0)
         {
-            print("Touch : " + hits[0].gameObject.tag + ", " + hits[0].gameObject.name);
+            hits[0].GetComponent<HealthScript>().ApplyDamage(damage);
             gameObject.SetActive(false);
         }
     }

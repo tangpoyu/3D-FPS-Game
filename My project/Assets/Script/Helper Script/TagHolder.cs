@@ -42,5 +42,7 @@ public class Tags
     public const string AXE_TAG = "Axe";
     public const string PLAYER_TAG = "Player";
     public const string ENEMY_TAG = "Enemy";
-
+    public const string CANNIBAL = "Cannibal";
+    public const string BOAR = "Boar";
 }
+
