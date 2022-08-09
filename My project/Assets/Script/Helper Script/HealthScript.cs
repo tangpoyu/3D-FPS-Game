@@ -116,8 +116,6 @@ public class HealthScript : MonoBehaviour
                         enemyAnimator.enabled = false;
                         StartCoroutine(DeadSound());
                         StartCoroutine(Dead(degree));
-
-                        // TODO : spawn more enemies
                         break;
 
                     case Tags.BOAR:
@@ -127,7 +125,6 @@ public class HealthScript : MonoBehaviour
                         StartCoroutine(DeadSound());
                         enemyAnimator.Dead();
                         Invoke("TurnOffGameObject", 3f);
-                        // TODO : spawn more enemies
                         break;
                 }
                 break;
@@ -146,6 +143,16 @@ public class HealthScript : MonoBehaviour
 
     private void TurnOffGameObject()
     {
+        switch(transform.name)
+        {
+            case Tags.BOAR:
+                EnemyManager.Instance.BoarCountMax++;
+                break;
+
+            case Tags.CANNIBAL:
+                EnemyManager.Instance.CannibalCountMax++; 
+                break;
+        }
         Destroy(gameObject);
     }
 

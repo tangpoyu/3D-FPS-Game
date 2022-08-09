@@ -7,7 +7,7 @@ public class ArrorBow : MonoBehaviour
     private Rigidbody myBody;
 
     [SerializeField]
-    private float speed =30f , deactivateTimer = 3f, damage = 15f;
+    private float speed =30f , deactivateTimer = 3f, damage;
 
     private void Awake()
     {
@@ -38,5 +38,13 @@ public class ArrorBow : MonoBehaviour
     {
         myBody.velocity = mainCamera.transform.forward * speed;
         transform.LookAt(transform.position + myBody.velocity);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == Tags.ENEMY_TAG)
+        {
+            other.GetComponent<HealthScript>().ApplyDamage(damage);
+        }
     }
 }

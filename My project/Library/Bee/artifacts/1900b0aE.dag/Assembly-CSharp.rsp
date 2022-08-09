@@ -352,6 +352,7 @@
 "Assets/Script/Enemy Script/EnemyAnimator.cs"
 "Assets/Script/Enemy Script/EnemyAudio.cs"
 "Assets/Script/Enemy Script/EnemyController.cs"
+"Assets/Script/Game Manager/EnemyManager.cs"
 "Assets/Script/Helper Script/HealthScript.cs"
 "Assets/Script/Helper Script/TagHolder.cs"
 "Assets/Script/Player Script/AttackPoint.cs"

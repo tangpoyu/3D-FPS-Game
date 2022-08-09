@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1954c27906cbf84496d588d64a060d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 100
   arrowPrefab: {fileID: 917017193940922253, guid: 6979688437051824693b11be55cfeaa7, type: 3}
   spearPrefab: {fileID: 1431194878215024975, guid: 3204110c8ceb45347b5f2e0d9e615c4e, type: 3}
   arrowStartPosition: {fileID: 7729643993958008953}
