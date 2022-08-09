@@ -32,6 +32,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private GameObject attackPoint;
 
+    private EnemyAudio enemyAudio;
+
     public EnemyState EnemyState { get => enemyState; set => enemyState = value; }
     public float ChaseDistance { get => chaseDistance; set => chaseDistance = value; }
     public float AttackDistance { get => attackDistance; set => attackDistance = value; }
@@ -42,6 +44,7 @@ public class EnemyController : MonoBehaviour
         enemyAnimator = GetComponent<EnemyAnimator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         attackTarget = GameObject.FindWithTag(Tags.PLAYER_TAG).transform;
+        enemyAudio = GetComponentInChildren<EnemyAudio>();
     }
     // Start is called before the first frame update
     void Start()
@@ -80,6 +83,7 @@ public class EnemyController : MonoBehaviour
         {
             enemyAnimator.Attack();
             attackTimer = 0;
+            enemyAudio.PlayAttackSound();
         }
         if (Vector3.Distance(transform.position, attackTarget.position) > attackDistance + chaseAfterAttackDistance)
         {
@@ -133,6 +137,7 @@ public class EnemyController : MonoBehaviour
         {
             enemyAnimator.Walk(false);
             EnemyState = EnemyState.CHASE;
+            enemyAudio.PlayScreamSound();
         }
     }
 

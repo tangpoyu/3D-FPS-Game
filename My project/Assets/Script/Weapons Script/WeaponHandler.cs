@@ -43,10 +43,12 @@ public class WeaponHandler : MonoBehaviour
 
     public GameObject attackPoint;
 
+    public Animator Animator { get => animator; set => animator = value; }
     public WeaponFireType WeaponFireType { get => weaponFireType; set => weaponFireType = value; }
     public WeaponBulletType WeaponBulletType { get => weaponBulletType; set => weaponBulletType = value; }
     public WeaponAim WeaponAim { get => weaponAim; set => weaponAim = value; }
     public bool IsZoomed { get => isZoomed; set => isZoomed = value; }
+   
 
     private void Awake()
     {

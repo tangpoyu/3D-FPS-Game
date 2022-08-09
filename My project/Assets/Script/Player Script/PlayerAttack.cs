@@ -68,9 +68,10 @@ public class PlayerAttack : MonoBehaviour
     private void WeaponShoot()
     {
         WeaponHandler weapon = weaponManager.SelectedWeapon;
+        Animator weaponAnimator = weapon.Animator;
         if(weapon.WeaponFireType == WeaponFireType.MULTIPLE)
         {
-            if(Input.GetMouseButton(0) && Time.time > nextTimeToFire)
+            if(Input.GetMouseButton(0) && Time.time > nextTimeToFire && !weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName(AnimationTags.WEAPON_ATTACK_ANIM))
             {
                 nextTimeToFire = Time.time + 1 / fireRate;
                 weapon.Shoot();
@@ -78,7 +79,7 @@ public class PlayerAttack : MonoBehaviour
             }
         } else
         {
-            if(Input.GetMouseButtonDown(0))
+            if(Input.GetMouseButtonDown(0) && !weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName(AnimationTags.WEAPON_ATTACK_ANIM))
             {
                 if (weapon.tag == Tags.AXE_TAG)
                 {

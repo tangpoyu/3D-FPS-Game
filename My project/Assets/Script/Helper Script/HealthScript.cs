@@ -21,6 +21,8 @@ public class HealthScript : MonoBehaviour
     [SerializeField]
     private Role role;
     private bool isDead;
+
+    private EnemyAudio enemyAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class HealthScript : MonoBehaviour
                 enemyAnimator = GetComponent<EnemyAnimator>();
                 enemyController = GetComponent<EnemyController>();
                 navMeshAgent = GetComponent<NavMeshAgent>();
+                enemyAudio = GetComponentInChildren<EnemyAudio>();
                 break;
         }
     }
@@ -47,7 +50,10 @@ public class HealthScript : MonoBehaviour
     {
         if (isDead) return;
         health -= damage;
-        print(gameObject.name + " : " + health + "pp.");
+        if(role == Role.ENEMY)
+        {
+            print(gameObject.name + " : " + health + "pp.");
+        }
 
         switch (role)
         {
@@ -99,18 +105,25 @@ public class HealthScript : MonoBehaviour
                         //enemyController.enabled = false;
                         //navMeshAgent.enabled = false;
                         //enemyAnimator.enabled = false;
+                        float degree = 0;
+                        enemyController.enabled = false;
+                        GetComponent<Animator>().enabled = false;
+                        navMeshAgent.enabled = false;
+                        enemyAnimator.enabled = false;
+                        StartCoroutine(DeadSound());
+                        StartCoroutine(Dead(degree));
 
-                        Destroy(gameObject);
-
-                        // TODO : StartCoroutine, and spawn more enemies
+                        // TODO : spawn more enemies
                         break;
 
                     case Tags.BOAR:
                         navMeshAgent.velocity = Vector3.zero;
                         navMeshAgent.isStopped = true;
                         enemyController.enabled = false;
+                        StartCoroutine(DeadSound());
                         enemyAnimator.Dead();
-                        // TODO : StartCoroutine, and spawn more enemies
+                        Invoke("TurnOffGameObject", 3f);
+                        // TODO : spawn more enemies
                         break;
                 }
                 break;
@@ -119,10 +132,7 @@ public class HealthScript : MonoBehaviour
         if(role == Role.PLAYER)
         {
             Invoke("RestartGame", 3f);
-        } else
-        {
-            Invoke("TurnOffGameObject", 3f);
-        }
+        } 
     }
 
     private void RestartGame()
@@ -132,7 +142,25 @@ public class HealthScript : MonoBehaviour
 
     private void TurnOffGameObject()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
+    }
 
+    IEnumerator DeadSound()
+    {
+        yield return new WaitForSeconds(0.3f);
+        enemyAudio.PlayDieSound();
+    }
+
+    IEnumerator Dead(float degree)
+    {
+        yield return new WaitForSeconds(0.1f);
+        if(degree <= -90)
+            Invoke("TurnOffGameObject",0f);
+        else
+        {
+            transform.rotation = Quaternion.EulerAngles(degree--, 0, 0);
+            StartCoroutine(Dead(degree));
+        }
+    
     }
 }

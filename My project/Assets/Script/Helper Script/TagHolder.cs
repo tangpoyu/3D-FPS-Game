@@ -21,6 +21,9 @@ public class AnimationTags
     public const string ZOOM_IN_ANIM = "ZoomIn";
     public const string ZOOM_OUT_ANIM = "ZoomOut";
 
+    public const string WEAPON_IDLE_ANIM = "Idle";
+    public const string WEAPON_ATTACK_ANIM = "Attack";
+
     public const string SHOOT_TRIGGER = "Shoot";
     public const string AIM_PARAMETER = "Aim";
 
@@ -33,15 +36,21 @@ public class AnimationTags
 
 public class Tags
 {
-
+    // helper
     public const string LOOK_ROOT = "Look Root";
     public const string ZOOM_CAMERA = "FP Camera";
     public const string CROSSHAIR = "Crosshair";
+
+    // Weapon
+    public const string AXE_TAG = "Axe";
+    // Bullet
     public const string ARROW_TAG = "Arrow";
     public const string SPEAR_TAG = "Spear";
-    public const string AXE_TAG = "Axe";
+   
+    // Role
     public const string PLAYER_TAG = "Player";
     public const string ENEMY_TAG = "Enemy";
+    // Detailed type of enemy
     public const string CANNIBAL = "Cannibal";
     public const string BOAR = "Boar";
 }
