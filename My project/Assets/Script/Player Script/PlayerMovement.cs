@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private CharacterController characterController;
     private PlayerFootsteps footsteps;
+    private PlayStats stats;
+
     private Vector3 move_Direction;
     public float speed;
     public float moveSpeed;
@@ -22,12 +24,19 @@ public class PlayerMovement : MonoBehaviour
     private float crouch_Height = 0.44f;
     private bool is_Crouching = false;
 
+    private float stamina = 100;
+    [SerializeField]
+    private float staminaVariable = 10f;
+    private bool isSprint = false;
+    
+
 
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
         look_Root = transform.GetChild(0);
         footsteps = GetComponentInChildren<PlayerFootsteps>();
+        stats = GetComponentInChildren<PlayStats>();
     }
 
     private void Start()
@@ -49,20 +58,42 @@ public class PlayerMovement : MonoBehaviour
         // convert move_direction from worldSpace to localSpace
         move_Direction = transform.TransformDirection(move_Direction);
         Crouch();
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !is_Crouching)
+       
+        if (Input.GetKey(KeyCode.LeftShift) && !is_Crouching)
         {
-            speed = sprint_Speed;
-            footsteps.StepDistance = footsteps.SprintStepDistance;
-            footsteps.VolumeMin = footsteps.SprintVolume;
-            footsteps.VolumeMax = footsteps.SprintVolume;
+            if(stamina > 0)
+            {
+                isSprint = true;
+                speed = sprint_Speed;
+                footsteps.StepDistance = footsteps.SprintStepDistance;
+                footsteps.VolumeMin = footsteps.SprintVolume;
+                footsteps.VolumeMax = footsteps.SprintVolume;
+                stamina -= Time.deltaTime * staminaVariable;
+                if (stamina < 0f)
+                {
+                    isSprint = false;
+                    stamina = 0f;
+                    speed = moveSpeed;
+                    footsteps.VolumeMin = footsteps.WalkVolumeMin;
+                    footsteps.VolumeMax = footsteps.WalkVolumeMax;
+                    footsteps.StepDistance = footsteps.WalkStepDistance;
+                }
+
+            }
+           
         }
+
         if (Input.GetKeyUp(KeyCode.LeftShift) && !is_Crouching)
         {
+            isSprint = false;
             speed = moveSpeed;
             footsteps.VolumeMin = footsteps.WalkVolumeMin;
             footsteps.VolumeMax = footsteps.WalkVolumeMax;
             footsteps.StepDistance = footsteps.WalkStepDistance;
         }
+        if(stamina > 100) stamina = 100;
+        stats.updateStamina(stamina);
+        if (!isSprint && !Input.GetKey(KeyCode.LeftShift) && stamina < 100 || is_Crouching) stamina += Time.deltaTime * staminaVariable;
         move_Direction *= speed * Time.deltaTime;
         ApplyGravity();
         characterController.Move(move_Direction);

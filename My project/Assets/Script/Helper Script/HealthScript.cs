@@ -15,6 +15,7 @@ public class HealthScript : MonoBehaviour
     private EnemyAnimator enemyAnimator;
     private NavMeshAgent navMeshAgent;
     private EnemyController enemyController;
+    private PlayStats stats;
 
     private float health = 100;
 
@@ -29,6 +30,7 @@ public class HealthScript : MonoBehaviour
         switch (role)
         {
             case Role.PLAYER:
+                stats = GetComponent<PlayStats>();
                 break;
 
             case Role.ENEMY:
@@ -50,6 +52,7 @@ public class HealthScript : MonoBehaviour
     {
         if (isDead) return;
         health -= damage;
+
         if(role == Role.ENEMY)
         {
             print(gameObject.name + " : " + health + "pp.");
@@ -58,7 +61,8 @@ public class HealthScript : MonoBehaviour
         switch (role)
         {
             case Role.PLAYER:
-                // TODO: update of player's health stat ui immediately 
+                //  update of player's health stat ui immediately 
+                stats.updateHealth(health);
                 break;
 
             case Role.ENEMY: 

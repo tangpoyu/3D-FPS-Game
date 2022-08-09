@@ -360,6 +360,7 @@
 "Assets/Script/Player Script/PlayerAxeWooshSound.cs"
 "Assets/Script/Player Script/PlayerFootsteps.cs"
 "Assets/Script/Player Script/PlayerMovement.cs"
+"Assets/Script/Player Script/PlayStats.cs"
 "Assets/Script/Player Script/test.cs"
 "Assets/Script/Weapons Script/ArrorBow.cs"
 "Assets/Script/Weapons Script/WeaponHandler.cs"
