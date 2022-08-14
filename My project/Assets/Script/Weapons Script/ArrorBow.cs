@@ -7,7 +7,7 @@ public class ArrorBow : MonoBehaviour
     private Rigidbody myBody;
 
     [SerializeField]
-    private float speed =30f , deactivateTimer = 3f, damage;
+    private float speed = 1f , deactivateTimer = 3f, damage;
 
     private void Awake()
     {
@@ -17,7 +17,7 @@ public class ArrorBow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DeactivateGameObject", deactivateTimer);
+       Invoke("DeactivateGameObject", deactivateTimer);
     }
 
     // Update is called once per frame
@@ -42,6 +42,7 @@ public class ArrorBow : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // print(other.name);
         if(other.tag == Tags.ENEMY_TAG)
         {
             other.GetComponent<HealthScript>().ApplyDamage(damage);

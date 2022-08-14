@@ -39,7 +39,7 @@ public class EnemyManager : MonoBehaviour
     IEnumerator CheckToSpawnEnemy()
     {
         yield return new WaitForSeconds(waitBeforeSpawnEnemyTime);
-        print(spawn++ + " : Checkspawn");
+        //print(spawn++ + " : Checkspawn");
         SpawnEnemies();
         StartCoroutine("CheckToSpawnEnemy");
     }

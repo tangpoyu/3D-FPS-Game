@@ -722,8 +722,8 @@ MonoBehaviour:
   - {fileID: 261266078}
   - {fileID: 318206364}
   - {fileID: 2072161262}
-  cannibalCountMax: 5
-  boarCountMax: 5
+  cannibalCountMax: 20
+  boarCountMax: 20
   waitBeforeSpawnEnemyTime: 10
 --- !u!4 &733403595
 Transform:
@@ -1654,31 +1654,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.45478952
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11161409
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8553998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.22135946
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -28.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 843.83
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1127945179258785307, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.679
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3132538005302101410, guid: 784ce01bca293eb4581ed41b231be253, type: 3}
       propertyPath: m_Name

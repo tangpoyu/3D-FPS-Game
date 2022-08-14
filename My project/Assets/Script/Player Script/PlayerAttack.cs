@@ -20,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
     private GameObject arrowPrefab, spearPrefab;
 
     [SerializeField]
-    private Transform arrowStartPosition;
+    private Transform spearSpawnPoint, arrowSpawnPoint;
 
     private void Awake()
     {
@@ -112,16 +112,16 @@ public class PlayerAttack : MonoBehaviour
     public void ThrowWeapon(string weaponType)
     {
         switch(weaponType)
-        {
+        {   
             case Tags.ARROW_TAG:
                 GameObject arrow = Instantiate(arrowPrefab);
-                arrow.transform.position = arrowStartPosition.position;
+                arrow.transform.position = arrowSpawnPoint.position;
                 arrow.GetComponent<ArrorBow>().Fire(mainCam);
                 break;
 
             case Tags.SPEAR_TAG:
                 GameObject spear = Instantiate(spearPrefab);
-                spear.transform.position = arrowStartPosition.position;
+                spear.transform.position = spearSpawnPoint.position;
                 spear.GetComponent<ArrorBow>().Fire(mainCam);
                 break;
         }

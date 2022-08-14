@@ -6,7 +6,7 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     [SerializeField]
-    private Transform playerRoot, lookRoot;
+    private Transform playerRoot;
 
     [SerializeField]
     private bool invert;
@@ -61,7 +61,7 @@ public class MouseLook : MonoBehaviour
         look_Angles.x = Mathf.Clamp(look_Angles.x, default_Look_Limits.x, default_Look_Limits.y);
 
         //current_Roll_Angle = Mathf.Lerp(current_Roll_Angle, Input.GetAxisRaw(MouseAxis.MOUSE_X) * roll_Angle, Time.deltaTime * roll_Speed);
-        lookRoot.localRotation = Quaternion.Euler(look_Angles.x, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(look_Angles.x, 0f, 0f);
         playerRoot.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f); 
     }
 
